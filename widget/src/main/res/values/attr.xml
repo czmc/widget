@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="EditTextWithCounter">
+        <attr name="counterColor" format="color"/>
+        <attr name="counterSize" format="dimension"/>
+        <attr name="limit" format="integer"/>
+        <attr name="line" format="integer"/>
+    </declare-styleable>
+
+</resources>
