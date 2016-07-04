@@ -6,5 +6,11 @@
         <attr name="limit" format="integer"/>
         <attr name="line" format="integer"/>
     </declare-styleable>
+    <!--  自定义圆形  图标 -->
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+    </declare-styleable>
+
 
 </resources>

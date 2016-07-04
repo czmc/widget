@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CommonDialog" parent="AlertDialog.AppCompat">
+        <item name="android:background">@drawable/white_card_radu</item>
+    </style>
+</resources>
