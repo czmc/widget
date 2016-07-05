@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+
         TextView header = new TextView(this);
         header.setText("GridView头测试");
         header.setGravity(Gravity.CENTER);
@@ -33,11 +34,13 @@ public class MainActivity extends AppCompatActivity {
         gv.addHeaderView(header);
         GvAdapter mAdapter = new GvAdapter(this,R.layout.item_gv);
         gv.setAdapter(mAdapter);
+
         ArrayList<Bean> datas =  new ArrayList<Bean>();
         datas.add(new Bean("条目1"));
         datas.add(new Bean("条目2"));
         datas.add(new Bean("条目3"));
         datas.add(new Bean("条目4"));
+
         mAdapter.setData(datas);
     }
 }
