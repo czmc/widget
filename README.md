@@ -1,6 +1,9 @@
 #插件小集合
-主要集成一些UI组件便于依赖使用：
+展示：
+
 <img src="/preview/1.jpg" width = "324" height = "576" alt="图片1" align=center />
+
+主要集成一些UI组件便于依赖使用：
 
 ------
     CircleImageView
