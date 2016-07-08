@@ -35,28 +35,34 @@ public class TipDialog extends CommonDialog {
         return new TipDialog(context);
     }
 
-    public void hideTitle() {
+    public TipDialog hideTitle() {
         this.txt_title.setVisibility(View.GONE);
+        return this;
     }
 
-    public void setTitle(String title) {
+    public TipDialog setTitle(String title) {
         this.txt_title.setText(title);
+        return this;
     }
 
-    public void setContent(String content) {
+    public TipDialog setContent(String content) {
         this.txt_content.setText(content);
+        return this;
     }
 
-    public void setLeftBtnText(String leftBtnText) {
+    public TipDialog setLeftBtnText(String leftBtnText) {
         this.btn_cancel.setText(leftBtnText);
+        return this;
     }
 
-    public void setRightBtnText(String rightBtnText) {
+    public TipDialog setRightBtnText(String rightBtnText) {
         this.btn_confirm.setText(rightBtnText);
+        return this;
     }
 
-    public void setOnBtnClickListener(OnDialogBtnClickListener onClickListener) {
+    public TipDialog setOnBtnClickListener(OnDialogBtnClickListener onClickListener) {
         this.mOnClickListener = onClickListener;
+        return this;
     }
 
     public void onClick(View v) {

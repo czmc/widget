@@ -15,7 +15,7 @@ import me.czmc.library.widget.R;
 
 public abstract class CommonDialog extends Dialog implements OnClickListener {
     public CommonDialog(Context context) {
-        super(context, R.style.CommonDialog);
+        super(context, R.style.Custom_Dialog_Dim);
         initDialogAttrs(context);
     }
 

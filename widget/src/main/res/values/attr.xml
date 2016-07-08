@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--带统计的编辑框-->
     <declare-styleable name="EditTextWithCounter">
         <attr name="counterColor" format="color"/>
         <attr name="counterSize" format="dimension"/>
@@ -10,6 +11,22 @@
     <declare-styleable name="CircleImageView">
         <attr name="border_width" format="dimension" />
         <attr name="border_color" format="color" />
+    </declare-styleable>
+    <!-- viewpager 指针-->
+    <declare-styleable name="ViewPagerIndicator">
+        <attr name="indicatorColor" format="color" />
+        <attr name="textsize" format="dimension" />
+        <attr name="highLightTextColor" format="color" />
+        <attr name="defaultTextColor" format="color" />
+        <attr name="indicatorHeight" format="dimension" />
+        <attr name="indicatorWidth" format="dimension" />
+        <attr name="visibleMenuCount" format="integer" />
+        <attr name="indicatorLimit" format="integer" />
+        <attr name="firstPosition" format="integer" />
+        <attr name="indicatorType" format="integer" >
+            <flag name="angel" value="0" />
+            <flag name="line" value="1" />
+        </attr>
     </declare-styleable>
 
 

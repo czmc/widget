@@ -4,7 +4,7 @@
 <img src="/preview/1.jpg" width = "324" height = "576" alt="图片1" align=center />
 
 主要集成一些UI组件便于依赖使用：
-
+v1.0.2
 ------
     CircleImageView
     圆形图片View。
@@ -24,9 +24,18 @@
 --------
     SwitchView
     酷炫的切换开关
+ v1.0.3  
+--------
+    ViewPagerIndicator
+    viewpager索引指针
+    
+--------
+    FloattingButton
+    悬浮在window上的按钮，可跟随手指移动
+    
     
 ##依赖使用
-    compile 'me.czmc.library:widget:1.0.2'
+    compile 'me.czmc.library:widget:1.0.3'
 
 ##License
     Copyright 2016 czmc, Inc.

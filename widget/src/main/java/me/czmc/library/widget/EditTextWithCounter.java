@@ -21,6 +21,7 @@ import me.czmc.library.utils.DisplayUtil;
 public class EditTextWithCounter extends EditText {
     private Paint mCounterPaint;
     private int mCurrentTextLength;
+    private int mBackground;
 
     public int getmLimit() {
         return mLimit;
@@ -57,9 +58,8 @@ public class EditTextWithCounter extends EditText {
     private int mCounterTextColor;
     private int mCounterTextSize;
     private int mLimit;
-    private int defaultPadding = DisplayUtil.dip2px(getContext(),5);
-//    private int mLine;
-    private String mContent="0";
+    //    private int mLine;
+    private String mContent = "0";
     public int MAXLINES = 2;
 
     public EditTextWithCounter(Context context, AttributeSet attrs, int defStyleAttr) {
@@ -85,18 +85,27 @@ public class EditTextWithCounter extends EditText {
         mLimit = ta.getInt(R.styleable.EditTextWithCounter_limit, -1);
 //        mLine = ta.getInt(R.styleable.EditTextWithCounter_line, -1);
         ta.recycle();
-
         setGravity(Gravity.START);
         mCounterPaint = new Paint();
         mCounterPaint.setColor(mCounterTextColor);
         mCounterPaint.setTextSize(mCounterTextSize);
         mCounterPaint.setAntiAlias(true);
-        setPadding(defaultPadding,defaultPadding,defaultPadding,defaultPadding+(int)mCounterPaint.getTextSize());
-        if(mLimit>=0){
-            mContent="0/"+mLimit;
+        if(!isContainAttr(attrs,"background")){
+            setBackgroundResource(R.drawable.white_card_radu);
         }
-        setBackgroundDrawable(getResources().getDrawable(R.drawable.white_card_state));
+        setPadding(getPaddingLeft(), getPaddingTop(), getPaddingRight(), getPaddingBottom() + (int) mCounterPaint.getTextSize());
+        if (mLimit >= 0) {
+            mContent = "0/" + mLimit;
+        }
         initEvent();
+    }
+
+    public boolean isContainAttr(AttributeSet attrs, String attrname) {
+        for (int i = 0; i < attrs.getAttributeCount(); i++) {
+            if (attrs.getAttributeName(i).equals(attrname))
+                return true;
+        }
+        return false;
     }
 
     private void initEvent() {
@@ -139,10 +148,9 @@ public class EditTextWithCounter extends EditText {
                         // setSelection用的索引不能使用str.length()否则会越界
                         setSelection(getText().length());
                     }
-                    mContent=mCurrentTextLength+"/"+mLimit;
-                }
-                else {
-                    mContent=mCurrentTextLength+"";
+                    mContent = mCurrentTextLength + "/" + mLimit;
+                } else {
+                    mContent = mCurrentTextLength + "";
                 }
                 postInvalidate();
             }
@@ -157,7 +165,7 @@ public class EditTextWithCounter extends EditText {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        canvas.drawText(mContent, getRight() - mCounterPaint.getTextSize() / 2 * mContent.length() - getPaddingRight(), getHeight()  - getPaddingBottom()+mCounterPaint.getTextSize(), mCounterPaint);
+        canvas.drawText(mContent, getRight() - mCounterPaint.getTextSize() / 2 * mContent.length() - getPaddingRight(), getHeight() - getPaddingBottom() + mCounterPaint.getTextSize(), mCounterPaint);
     }
 
 }

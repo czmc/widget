@@ -4,36 +4,70 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-   android:orientation="vertical"
-    >
+    android:orientation="vertical">
+
+    <me.czmc.library.widget.ViewPagerIndicator
+        android:id="@+id/viewPagerIndicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:padding="10dp"
+        app:defaultTextColor="@android:color/white"
+        app:firstPosition="0"
+        app:highLightTextColor="@color/colorAccent"
+        app:indicatorColor="@color/colorAccent"
+        app:indicatorHeight="5dp"
+        app:indicatorLimit="2"
+        app:indicatorType="angel"
+        app:textsize="16sp"
+        app:visibleMenuCount="3" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"></android.support.v4.view.ViewPager>
+    <View
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="3px"
+        android:background="@color/colorPrimary"
+        />
+    <me.czmc.library.widget.GridViewWithHeaderAndFooter
+        android:id="@+id/gv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:numColumns="2" />
+    <View
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="3px"
+        android:background="@color/colorPrimary"
+        />
     <me.czmc.library.widget.EditTextWithCounter
         android:layout_width="match_parent"
-        android:padding="5dp"
-        android:minLines="2"
         android:layout_height="wrap_content"
-        app:limit="100"
-        />
+        android:background="@drawable/white_card_state"
+        android:minLines="2"
+        android:padding="10dp"
+        app:limit="100" />
+
     <me.czmc.library.widget.SwitchView
         android:layout_width="50dp"
-        android:layout_height="wrap_content"
-        />
+        android:layout_height="wrap_content" />
+
     <me.czmc.library.widget.CircleImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@mipmap/ic_launcher"
         app:border_color="@android:color/black"
-        app:border_width="1dp"
-        />
-    <me.czmc.library.widget.GridViewWithHeaderAndFooter
-        android:id="@+id/gv"
-        android:numColumns="2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        app:border_width="1dp" />
+
     <Button
         android:id="@+id/btn_open"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="点击打开对话框"
         android:padding="5dp"
-        />
+        android:text="点击打开对话框" />
 </LinearLayout>

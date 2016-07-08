@@ -31,4 +31,14 @@ public class DisplayUtil {
         Point P = getScreenMetrics(context);
         return ((float) P.y) / ((float) P.x);
     }
+    public static int getScreenWidth(Context context) {
+        DisplayMetrics metric =context.getResources().getDisplayMetrics();
+        int width = metric.widthPixels;     // 屏幕宽度（像素）
+        return width;
+    }
+    public static int getScreenHeight(Context context) {
+        DisplayMetrics metric =context.getResources().getDisplayMetrics();
+        int height = metric.heightPixels;     // 屏幕高度（像素）
+        return height;
+    }
 }
