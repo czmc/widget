@@ -1,5 +1,6 @@
 package me.czmc.widgetdemo;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -26,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     ViewPager viewPager;
     @BindView(R.id.viewPagerIndicator)
     ViewPagerIndicator indicator;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,22 +39,32 @@ public class MainActivity extends AppCompatActivity {
         testViewPagerIndicator();
     }
 
-    @OnClick(R.id.btn_open)
-    public void testTipDialog(){
-        TipDialog.newInstance(this).hideTitle().setContent("测试").show();
+    @OnClick({R.id.btn_open, R.id.btn_start})
+    public void click(View view) {
+        switch (view.getId()) {
+            case R.id.btn_open:
+                TipDialog.newInstance(this).hideTitle().setContent("测试").show();
+                break;
+            case R.id.btn_start:
+                Intent intent = new Intent(MainActivity.this,TestAdapterActivity.class);
+                startActivity(intent);
+                break;
+        }
+
     }
 
-    public void testFloattingButton(){
-        FloattingButton btn1 = new FloattingButton(this,DisplayUtil.getScreenWidth(this),DisplayUtil.getScreenHeight(this)*3/4);
+    public void testFloattingButton() {
+        FloattingButton btn1 = new FloattingButton(this, DisplayUtil.getScreenWidth(this), DisplayUtil.getScreenHeight(this) * 3 / 4);
         btn1.setImageResource(R.mipmap.icon_fb);
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this,"click",Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "click", Toast.LENGTH_SHORT).show();
             }
         });
     }
-    public void testViewPagerIndicator(){
+
+    public void testViewPagerIndicator() {
         ArrayList mContents = new ArrayList();
         ArrayList mTitles = new ArrayList();
         mContents.add(TagFragment.newInstance("part1"));
@@ -65,20 +77,21 @@ public class MainActivity extends AppCompatActivity {
         mTitles.add("菜单三");
         mTitles.add("菜单四");
         mTitles.add("菜单五");
-        viewPager.setAdapter( new TagFragmentPagerAdapter(this.getSupportFragmentManager(), mContents,mTitles));
+        viewPager.setAdapter(new TagFragmentPagerAdapter(this.getSupportFragmentManager(), mContents, mTitles));
         indicator.setViewPager(viewPager);
     }
-    public void testGridViewWithHeaderAndFooter(){
+
+    public void testGridViewWithHeaderAndFooter() {
 
         TextView header = new TextView(this);
         header.setText("GridView头测试");
         header.setGravity(Gravity.CENTER);
-        header.setPadding(30,30,30,30);
+        header.setPadding(30, 30, 30, 30);
         gv.addHeaderView(header);
-        GvAdapter mAdapter = new GvAdapter(this,R.layout.item_gv);
+        GvAdapter mAdapter = new GvAdapter(this, R.layout.item_gv);
         gv.setAdapter(mAdapter);
 
-        ArrayList<Bean> datas =  new ArrayList();
+        ArrayList<Bean> datas = new ArrayList();
         datas.add(new Bean("条目1"));
         datas.add(new Bean("条目2"));
         datas.add(new Bean("条目3"));

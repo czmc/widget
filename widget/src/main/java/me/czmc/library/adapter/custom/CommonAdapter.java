@@ -1,4 +1,4 @@
-package me.czmc.library.adapter;
+package me.czmc.library.adapter.custom;
 
 import android.content.Context;
 import android.view.LayoutInflater;

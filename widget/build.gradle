@@ -24,12 +24,13 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     compile 'com.android.support:appcompat-v7:23.4.0'
     testCompile 'junit:junit:4.12'
     androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.2'
     androidTestCompile 'com.android.support.test:runner:0.5'
     androidTestCompile 'com.android.support:support-annotations:23.4.0'
+    compile 'com.android.support:recyclerview-v7:23.4.0'
 }
 def siteUrl = 'https://github.com/czmc/widgetDemo' // 项目的主页
 def gitUrl = 'https://github.com/czmc/widgetDemo.git' // Git仓库的url
