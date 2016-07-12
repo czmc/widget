@@ -1,9 +1,11 @@
 #插件小集合
-展示：
+效果图如下：
 
 <img src="/preview/Screenshot1.png" width = "324" height = "576" alt="图片1" align=center />
 <img src="/preview/Screenshot2.png" width = "324" height = "576" alt="图片2" align=center />
-主要集成一些UI组件便于依赖使用：
+
+该项目目标是集成一些常见的UI组件，以便于使用：
+
 v1.0.2
 ------
     CircleImageView
