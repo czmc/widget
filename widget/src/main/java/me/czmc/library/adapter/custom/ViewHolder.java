@@ -1,5 +1,5 @@
 
-package me.czmc.library.adapter;
+package me.czmc.library.adapter.custom;
 
 
 import android.annotation.SuppressLint;
