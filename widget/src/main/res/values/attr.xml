@@ -28,6 +28,20 @@
             <flag name="line" value="1" />
         </attr>
     </declare-styleable>
-
+    <!-- HorizontalProgressBar atta declare-->
+    <declare-styleable name="HorizontalProgressBarWithCounter">
+        <attr name="textColor" format="color" />
+        <attr name="textSize" format="dimension" />
+        <attr name="textOffset" format="dimension" />
+        <attr name="textVisible" format="boolean" />
+        <attr name="reachedColor" format="color" />
+        <attr name="reachedHeight" format="dimension" />
+        <attr name="unReachedColor" format="color" />
+        <attr name="unReachedHeight" format="dimension" />
+    </declare-styleable>
+    <!-- RoundProgressBar atta declare-->
+    <declare-styleable name="RoundProgressBarWithCounter">
+        <attr name="roundRadius" format="dimension" />
+    </declare-styleable>
 
 </resources>

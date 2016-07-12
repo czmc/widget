@@ -26,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
     ViewPager viewPager;
     @BindView(R.id.viewPagerIndicator)
     ViewPagerIndicator indicator;
+    private FloattingButton btn1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void testFloattingButton(){
-        FloattingButton btn1 = new FloattingButton(this,DisplayUtil.getScreenWidth(this),DisplayUtil.getScreenHeight(this)*3/4);
+        btn1 = new FloattingButton(this,DisplayUtil.getScreenWidth(this),DisplayUtil.getScreenHeight(this)*3/4);
         btn1.setImageResource(R.mipmap.icon_fb);
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -85,5 +87,11 @@ public class MainActivity extends AppCompatActivity {
         datas.add(new Bean("条目4"));
 
         mAdapter.setData(datas);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        btn1.onDestroy();
     }
 }

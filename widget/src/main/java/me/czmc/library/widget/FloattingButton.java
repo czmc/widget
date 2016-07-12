@@ -63,14 +63,14 @@ public class FloattingButton extends ImageView implements View.OnLongClickListen
         // 获取相对屏幕的坐标，即以屏幕左上角为原点
         x = event.getRawX();
         y = event.getRawY() - statusHeight; // 25是系统状态栏的高度
-        Log.i("startP", "startX" + mTouchStartX + "====startY"
+        Log.i("startP", "startX:" + mTouchStartX + "====startY:"
                 + mTouchStartY);
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
                 // 获取相对View的坐标，即以此View左上角为原点
                 mTouchStartX = event.getX();
                 mTouchStartY = event.getY();
-                Log.i("startP", "startX" + mTouchStartX + "====startY"
+                Log.i("startP", "startX:" + mTouchStartX + "====startY:"
                         + mTouchStartY);
                 break;
             case MotionEvent.ACTION_MOVE:
