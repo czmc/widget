@@ -1,8 +1,8 @@
 #插件小集合
 展示：
 
-<img src="/preview/1.jpg" width = "324" height = "576" alt="图片1" align=center />
-
+<img src="/preview/Screenshot1.png" width = "324" height = "576" alt="图片1" align=center />
+<img src="/preview/Screenshot2.png" width = "324" height = "576" alt="图片2" align=center />
 主要集成一些UI组件便于依赖使用：
 v1.0.2
 ------
@@ -32,10 +32,27 @@ v1.0.2
 --------
     FloattingButton
     悬浮在window上的按钮，可跟随手指移动
-    
-    
+v1.0.4  
+--------
+    HorizontalProgressBarWithCounter
+    带统计数字的水平进度条
+--------
+    RoundProgressBarWidthCounter
+    带统计数字的圆形进度条
+---------
+    AutoLineLayout
+    自动换行的viewGroup，根据子view的宽度自动换行
+----------
+    custom/CommonAdapter&MultiItemTypeAdapter
+    传统listview和gridview的万能适配器--对BaseAdpater封装，起到简便的作用
+    传统listview和gridview的分类型适配器--根据不同类型采用不同的适配器去管理
+----------
+    recyclerview/CommonAdapter&MultiItemTypeAdapter   
+    针对于recyclerview的万能适配器--对BaseAdpater封装，起到简便的作用
+    针对于recyclerview的分类型适配器--根据不同类型采用不同的适配器去管理
+
 ##依赖使用
-    compile 'me.czmc.library:widget:1.0.3'
+    compile 'me.czmc.library:widget:1.0.4'
 
 ##License
     Copyright 2016 czmc, Inc.

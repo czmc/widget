@@ -25,6 +25,11 @@ public class MultiItemTypeAdapter<T> extends RecyclerView.Adapter<ViewHolder>
         mDatas = datas;
         mItemViewDelegateManager = new ItemViewDelegateManager();
     }
+    public MultiItemTypeAdapter(Context context)
+    {
+        mContext = context;
+        mItemViewDelegateManager = new ItemViewDelegateManager();
+    }
 
     @Override
     public int getItemViewType(int position)

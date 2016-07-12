@@ -43,13 +43,14 @@ public class RoundProgressBarWidthCounter extends ProgressBar {
         mReachedHeight=(int)ta.getDimension(R.styleable.HorizontalProgressBarWithCounter_reachedHeight,mReachedHeight);
         mUnReachedHeight=(int)ta.getDimension(R.styleable.HorizontalProgressBarWithCounter_unReachedHeight,mUnReachedHeight);
         mTextColor=ta.getColor(R.styleable.HorizontalProgressBarWithCounter_textColor,mTextColor);
-        mTextSize=(int)ta.getDimension(R.styleable.HorizontalProgressBarWithCounter_textSize,mTextSize);
+        mTextSize=ta.getDimension(R.styleable.HorizontalProgressBarWithCounter_textSize,mTextSize);
         mTextVisible = ta.getBoolean(R.styleable.HorizontalProgressBarWithCounter_textVisible, true);
         ta.recycle();
         mPaint.setStyle(Style.STROKE);
         mPaint.setAntiAlias(true);
         mPaint.setDither(true);
         mPaint.setStrokeCap(Paint.Cap.ROUND);
+        mPaint.setTextSize(mTextSize);
     }
 
     /**
@@ -66,7 +67,6 @@ public class RoundProgressBarWidthCounter extends ProgressBar {
         int width = resolveSize(expect, widthMeasureSpec);
         int height = resolveSize(expect, heightMeasureSpec);
         int realWidth = Math.min(width, height);
-
         mRadius = (realWidth - getPaddingLeft() - getPaddingRight() - mMaxPaintWidth) / 2;
 
         setMeasuredDimension(realWidth, realWidth);

@@ -11,12 +11,12 @@ public class Rv2Adapter implements ItemViewDelegate<Bean> {
 
     @Override
     public int getItemViewLayoutId() {
-        return R.layout.item_1;
+        return R.layout.item_2;
     }
 
     @Override
     public boolean isForViewType(Bean item, int position) {
-        return item.isSingleItem;
+        return !item.isSingleItem;
     }
 
     @Override

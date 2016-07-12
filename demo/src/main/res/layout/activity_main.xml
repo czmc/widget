@@ -3,77 +3,116 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
-    <me.czmc.library.widget.ViewPagerIndicator
-        android:id="@+id/viewPagerIndicator"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
-        android:padding="10dp"
-        app:defaultTextColor="@android:color/white"
-        app:firstPosition="0"
-        app:highLightTextColor="@color/colorAccent"
-        app:indicatorColor="@color/colorAccent"
-        app:indicatorHeight="5dp"
-        app:indicatorLimit="2"
-        app:indicatorType="angel"
-        app:textsize="16sp"
-        app:visibleMenuCount="3" />
+        android:orientation="vertical">
+        <!--ViewPagerIndicator-->
+        <me.czmc.library.widget.ViewPagerIndicator
+            android:id="@+id/viewPagerIndicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:padding="10dp"
+            app:defaultTextColor="@android:color/white"
+            app:firstPosition="0"
+            app:highLightTextColor="@color/colorAccent"
+            app:indicatorColor="@color/colorAccent"
+            app:indicatorHeight="5dp"
+            app:indicatorLimit="2"
+            app:indicatorType="angel"
+            app:textsize="16sp"
+            app:visibleMenuCount="3" />
 
-    <android.support.v4.view.ViewPager
-        android:id="@+id/viewpager"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"></android.support.v4.view.ViewPager>
-    <View
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="3px"
-        android:background="@color/colorPrimary"
-        />
-    <me.czmc.library.widget.GridViewWithHeaderAndFooter
-        android:id="@+id/gv"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:numColumns="2" />
-    <View
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="3px"
-        android:background="@color/colorPrimary"
-        />
-    <me.czmc.library.widget.EditTextWithCounter
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/white_card_state"
-        android:minLines="2"
-        android:padding="10dp"
-        app:limit="100" />
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+        </android.support.v4.view.ViewPager>
 
-    <me.czmc.library.widget.SwitchView
-        android:layout_width="50dp"
-        android:layout_height="wrap_content" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3px"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorPrimary" />
 
-    <me.czmc.library.widget.CircleImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@mipmap/ic_launcher"
-        app:border_color="@android:color/black"
-        app:border_width="1dp" />
+        <me.czmc.library.widget.GridViewWithHeaderAndFooter
+            android:id="@+id/gv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:numColumns="3" />
 
-    <Button
-        android:id="@+id/btn_open"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="5dp"
-        android:text="点击打开对话框" />
-    <Button
-        android:id="@+id/btn_start"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="5dp"
-        android:text="点击打开Activity" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3px"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorPrimary" />
+
+        <me.czmc.library.widget.EditTextWithCounter
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/white_card_state"
+            android:minLines="1"
+            android:padding="10dp"
+            app:limit="100" />
+        <!--自动换行布局，放小部件-->
+        <me.czmc.library.widget.AutoLineLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <me.czmc.library.widget.SwitchView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content" />
+
+            <me.czmc.library.widget.CircleImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@mipmap/ic_launcher"
+                app:border_color="@android:color/black"
+                app:border_width="1dp" />
+
+            <me.czmc.library.widget.HorizontalProgressBarWithCounter
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:progress="10"
+                app:reachedColor="@color/colorAccent"
+                app:reachedHeight="10px"
+                app:textColor="@color/colorPrimary"
+                app:textOffset="1dp"
+                app:textSize="12sp"
+                app:textVisible="true"
+                app:unReachedColor="@color/colorPrimary"
+                app:unReachedHeight="5px" />
+
+            <me.czmc.library.widget.RoundProgressBarWidthCounter
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:progress="10"
+                app:reachedColor="@color/colorAccent"
+                app:reachedHeight="10px"
+                app:textColor="@color/colorPrimary"
+                app:textSize="12sp"
+                app:textVisible="true"
+                app:unReachedColor="@color/colorPrimary"
+                app:unReachedHeight="5px" />
+
+        </me.czmc.library.widget.AutoLineLayout>
+        <Button
+            android:id="@+id/btn_open"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="点击打开对话框" />
+        <Button
+            android:id="@+id/btn_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="点击打开Activity" />
+    </LinearLayout>
 </LinearLayout>
