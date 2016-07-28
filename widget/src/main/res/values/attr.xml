@@ -43,5 +43,20 @@
     <declare-styleable name="RoundProgressBarWithCounter">
         <attr name="roundRadius" format="dimension" />
     </declare-styleable>
-
+    <!-- HorizomtalSelector-->
+    <declare-styleable name="HorizomtalSelector">
+        <attr name="displayItemCount" format="integer" />
+        <attr name="textColorFocus" format="color" />
+        <attr name="textColorNormal" format="color" />
+        <attr name="itemTextSize" format="dimension" />
+        <attr name="indicatorSize" format="dimension" />
+    </declare-styleable>
+    <!--switchView-->
+    <declare-styleable name="SwitchView">
+        <attr name="primaryColor" format="color"/>
+    </declare-styleable>
+    <!--switchView-->
+    <declare-styleable name="RadiusImageView">
+        <attr name="radius" format="dimension"/>
+    </declare-styleable>
 </resources>

@@ -38,7 +38,16 @@
             android:layout_marginBottom="10dp"
             android:layout_marginTop="10dp"
             android:background="@color/colorPrimary" />
-
+        <me.czmc.library.widget.HorizontalSelector
+            android:id="@+id/selector"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:displayItemCount="5"
+            app:textColorFocus="@color/colorPrimary"
+            app:textColorNormal="#666666"
+            app:itemTextSize="16sp"
+            app:indicatorSize="50dp"
+            />
         <me.czmc.library.widget.GridViewWithHeaderAndFooter
             android:id="@+id/gv"
             android:layout_width="match_parent"
@@ -66,6 +75,7 @@
 
             <me.czmc.library.widget.SwitchView
                 android:layout_width="50dp"
+                app:primaryColor="@color/colorPrimary"
                 android:layout_height="wrap_content" />
 
             <me.czmc.library.widget.CircleImageView
@@ -100,6 +110,12 @@
                 app:textVisible="true"
                 app:unReachedColor="@color/colorPrimary"
                 app:unReachedHeight="5px" />
+            <me.czmc.library.widget.RadiusImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:radius="10dp"
+                android:src="@mipmap/img_245"
+                />
 
         </me.czmc.library.widget.AutoLineLayout>
         <Button

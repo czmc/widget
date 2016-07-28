@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.TextView;
@@ -18,15 +19,18 @@ import me.czmc.library.dialog.TipDialog;
 import me.czmc.library.utils.DisplayUtil;
 import me.czmc.library.widget.FloattingButton;
 import me.czmc.library.widget.GridViewWithHeaderAndFooter;
+import me.czmc.library.widget.HorizontalSelector;
 import me.czmc.library.widget.ViewPagerIndicator;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements HorizontalSelector.OnSelectedCallBack {
     @BindView(R.id.gv)
     GridViewWithHeaderAndFooter gv;
     @BindView(R.id.viewpager)
     ViewPager viewPager;
     @BindView(R.id.viewPagerIndicator)
     ViewPagerIndicator indicator;
+    @BindView(R.id.selector)
+    HorizontalSelector selector;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +41,18 @@ public class MainActivity extends AppCompatActivity {
         testFloattingButton();
         testGridViewWithHeaderAndFooter();
         testViewPagerIndicator();
+        testHorizontalWheelView();
+    }
+
+    private void testHorizontalWheelView() {
+        ArrayList<String> mTitles = new ArrayList();
+        mTitles.add("菜单一");
+        mTitles.add("菜单二");
+        mTitles.add("菜单三");
+        mTitles.add("菜单四");
+        mTitles.add("菜单五");
+        selector.setItems(mTitles,0);
+        selector.setOnSelectedCallBack(this);
     }
 
     @OnClick({R.id.btn_open, R.id.btn_start})
@@ -98,5 +114,11 @@ public class MainActivity extends AppCompatActivity {
         datas.add(new Bean("条目4"));
 
         mAdapter.setData(datas);
+    }
+
+    @Override
+    public void onSelected(boolean isUserScroll, int index, String title) {
+            Toast.makeText(this, title, Toast.LENGTH_SHORT).show();
+        Log.i("onSelected",title);
     }
 }

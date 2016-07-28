@@ -2,6 +2,7 @@ package me.czmc.library.widget;
 
 import android.annotation.TargetApi;
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
@@ -30,6 +31,7 @@ public class SwitchView extends View {
 	private final RectF bRectF = new RectF();
 	private float sAnim, bAnim;
 	private RadialGradient shadowGradient;
+	private int primaryColor=Color.parseColor("#FB334F");
 	private final AccelerateInterpolator aInterpolator = new AccelerateInterpolator(2);
 
 	/**
@@ -80,6 +82,9 @@ public class SwitchView extends View {
 	@TargetApi(Build.VERSION_CODES.HONEYCOMB)
 	public SwitchView(Context context, AttributeSet attrs) {
 		super(context, attrs);
+		TypedArray ta = getResources().obtainAttributes(attrs,R.styleable.SwitchView);
+		primaryColor = ta.getColor(R.styleable.SwitchView_primaryColor,primaryColor);
+		ta.recycle();
 		setLayerType(LAYER_TYPE_SOFTWARE, null);
 	}
 
@@ -209,7 +214,7 @@ public class SwitchView extends View {
 		final boolean isOn = (state == STATE_SWITCH_ON || state == STATE_SWITCH_ON2);
 		// draw background
 		paint.setStyle(Style.FILL);
-		paint.setColor(isOn ? Color.parseColor("#FB334F") : 0xffe3e3e3);
+		paint.setColor(isOn ? primaryColor : 0xffe3e3e3);
 		canvas.drawPath(sPath, paint);
 
 		sAnim = sAnim - 0.1f > 0 ? sAnim - 0.1f : 0;
@@ -246,7 +251,7 @@ public class SwitchView extends View {
 		paint.setStyle(Style.STROKE);
 		paint.setStrokeWidth(bStrokeWidth * 0.5f);
 
-		paint.setColor(isOn ? Color.parseColor("#FB334F"): 0xffbfbfbf);
+		paint.setColor(isOn ? primaryColor: 0xffbfbfbf);
 		canvas.drawPath(bPath, paint);
 
 		canvas.restore();

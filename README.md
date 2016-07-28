@@ -52,9 +52,22 @@ v1.0.4
     recyclerview/CommonAdapter&MultiItemTypeAdapter   
     针对于recyclerview的万能适配器--对BaseAdpater封装，起到简便的作用
     针对于recyclerview的分类型适配器--根据不同类型采用不同的适配器去管理
+v1.0.5  
+--------
+    HorizontalSelector
+    水平选择器，滑动标题栏进行选择，回调方法onSelected(boolean isUserScroll, int index, String title)
+--------
+    InnerListView
+    解决ScrollView嵌套ListView嵌套只显示一行的问题。
+--------    
+    SwitchView 增加颜色设定
+--------    
+    RadiusImageView 圆角图片
+    
+    
 
 ##依赖使用
-    compile 'me.czmc.library:widget:1.0.4'
+    compile 'me.czmc.library:widget:1.0.5'
 
 ##License
     Copyright 2016 czmc, Inc.
