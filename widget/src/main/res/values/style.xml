@@ -12,8 +12,12 @@
         <item name="android:backgroundDimEnabled">false</item>
     </style>
 
+
     <style name="Custom_Dialog_Dim" parent="CustomDialog">
         <item name="android:backgroundDimEnabled">true</item>
         <item name="android:backgroundDimAmount">0.25</item>
+    </style>
+    <style name="Edit_Dialog_Dim" parent="Custom_Dialog_Dim">
+        <item name="android:background">@drawable/gray_card_radu</item>
     </style>
 </resources>

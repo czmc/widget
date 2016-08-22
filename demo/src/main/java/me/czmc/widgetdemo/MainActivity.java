@@ -15,6 +15,7 @@ import java.util.ArrayList;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import me.czmc.library.dialog.EditDialog;
 import me.czmc.library.dialog.TipDialog;
 import me.czmc.library.utils.DisplayUtil;
 import me.czmc.library.widget.FloattingButton;
@@ -55,7 +56,7 @@ public class MainActivity extends AppCompatActivity implements HorizontalSelecto
         selector.setOnSelectedCallBack(this);
     }
 
-    @OnClick({R.id.btn_open, R.id.btn_start})
+    @OnClick({R.id.btn_open,R.id.btn_open_edit, R.id.btn_start})
     public void click(View view) {
         switch (view.getId()) {
             case R.id.btn_open:
@@ -64,6 +65,14 @@ public class MainActivity extends AppCompatActivity implements HorizontalSelecto
             case R.id.btn_start:
                 Intent intent = new Intent(MainActivity.this,TestAdapterActivity.class);
                 startActivity(intent);
+                break;
+            case R.id.btn_open_edit:
+                EditDialog.newInstance(this).setTitle("编辑对话框").setOnBtnClickListener(new EditDialog.OnDialogBtnClickListener() {
+                    @Override
+                    public void onConfirmBtnClicked(EditDialog newClassifyDialog, String value) {
+                        Toast.makeText(getApplicationContext(),value,Toast.LENGTH_SHORT).show();
+                    }
+                }).show();
                 break;
         }
 
