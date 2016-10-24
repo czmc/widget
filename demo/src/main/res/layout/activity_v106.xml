@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_v106"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="me.czmc.widgetdemo.v106.V106Activity">
+    <me.czmc.library.widget.SwipeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/item_delete"
+            android:layout_width="wrap_content"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:layout_toRightOf="@+id/view_main"
+            android:background="@color/colorAccent"
+            android:gravity="center"
+            android:text="删除"
+            android:textColor="@android:color/white"
+            android:textSize="15sp" />
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="测试测试测试测试测试"
+            android:padding="15dp"
+            />
+    </me.czmc.library.widget.SwipeLayout>
+    <TextView
+        android:id="@+id/tv_test"
+        android:padding="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="测试数据"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="打开ACTION_SHEET"
+        android:onClick="open"
+        />
+
+</LinearLayout>

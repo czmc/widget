@@ -1,4 +1,4 @@
-package me.czmc.widgetdemo;
+package me.czmc.widgetdemo.v102;
 
 /**
  * Created by czmc on 2016/7/4.

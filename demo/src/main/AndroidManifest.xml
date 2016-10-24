@@ -15,7 +15,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".TestAdapterActivity"></activity>
+        <activity android:name=".v104.TestAdapterActivity" />
+        <activity android:name=".v106.V106Activity" />
+        <activity android:name=".v102.V102Activity" />
+        <activity android:name=".v103.V103Activity" />
+        <activity android:name=".v104.V104Activity" />
+        <activity android:name=".v105.V105Activity"></activity>
     </application>
 
 </manifest>

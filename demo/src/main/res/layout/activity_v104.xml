@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_v104"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="me.czmc.widgetdemo.v104.V104Activity">
+    <!--自动换行布局，放小部件-->
+    <me.czmc.library.widget.AutoLineLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <me.czmc.library.widget.HorizontalProgressBarWithCounter
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:progress="10"
+        app:reachedColor="@color/colorAccent"
+        app:reachedHeight="10px"
+        app:textColor="@color/colorPrimary"
+        app:textOffset="1dp"
+        app:textSize="12sp"
+        app:textVisible="true"
+        app:unReachedColor="@color/colorPrimary"
+        app:unReachedHeight="5px" />
+
+    <me.czmc.library.widget.RoundProgressBarWidthCounter
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:progress="10"
+        app:reachedColor="@color/colorAccent"
+        app:reachedHeight="10px"
+        app:textColor="@color/colorPrimary"
+        app:textSize="12sp"
+        app:textVisible="true"
+        app:unReachedColor="@color/colorPrimary"
+        app:unReachedHeight="5px" />
+        <Button
+            android:id="@+id/btn_open"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="点击打开对话框" />
+        <Button
+            android:id="@+id/btn_open_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="点击打开编辑框" />
+    </me.czmc.library.widget.AutoLineLayout>
+    <Button
+        android:id="@+id/btn_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="点击打开Activity" />
+</LinearLayout>

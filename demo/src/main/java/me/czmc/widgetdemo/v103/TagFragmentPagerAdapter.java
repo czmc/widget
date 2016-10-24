@@ -1,4 +1,4 @@
-package me.czmc.widgetdemo;
+package me.czmc.widgetdemo.v103;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;

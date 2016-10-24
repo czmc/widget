@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_v102"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="me.czmc.widgetdemo.v102.V102Activity">
+    <me.czmc.library.widget.CircleImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@mipmap/ic_launcher"
+        app:border_color="@android:color/black"
+        app:border_width="1dp" />
+
+    <me.czmc.library.widget.EditTextWithCounter
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/white_card_state"
+        android:minLines="1"
+        android:padding="10dp"
+        app:limit="100" />
+    <me.czmc.library.widget.GridViewWithHeaderAndFooter
+        android:id="@+id/gv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:numColumns="3" />
+
+</LinearLayout>

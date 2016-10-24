@@ -1,4 +1,4 @@
-package me.czmc.widgetdemo;
+package me.czmc.widgetdemo.v104;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -11,6 +11,10 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import me.czmc.library.adapter.recyclerview.DividerItemDecoration;
 import me.czmc.library.adapter.recyclerview.MultiItemTypeAdapter;
+import me.czmc.widgetdemo.R;
+import me.czmc.widgetdemo.v102.Bean;
+import me.czmc.widgetdemo.v104.Rv1Adapter;
+import me.czmc.widgetdemo.v104.Rv2Adapter;
 
 import static me.czmc.library.adapter.recyclerview.DividerItemDecoration.VERTICAL_LIST;
 

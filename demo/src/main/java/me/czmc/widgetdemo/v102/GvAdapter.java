@@ -1,9 +1,10 @@
-package me.czmc.widgetdemo;
+package me.czmc.widgetdemo.v102;
 
 import android.content.Context;
 
 import me.czmc.library.adapter.custom.CommonAdapter;
 import me.czmc.library.adapter.custom.ViewHolder;
+import me.czmc.widgetdemo.R;
 
 /**
  * Created by czmc on 2016/7/4.

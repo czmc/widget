@@ -1,8 +1,7 @@
 #插件小集合
 效果图如下：
 
-<img src="/preview/Screenshot1.png" width = "324" height = "576" alt="图片1" align=center />
-<img src="/preview/Screenshot2.png" width = "324" height = "576" alt="图片2" align=center />
+<img src="/preview/1.gif" width = "540" height = "720" alt="图片1" align=center />
 
 该项目目标是集成一些常见的UI组件，以便于使用：
 
@@ -63,11 +62,23 @@ v1.0.5
     SwitchView 增加颜色设定
 --------    
     RadiusImageView 圆角图片
+
+v1.0.6  
+--------
+     ActionSheet
+     仿IOS 底部弹出选择器
+--------
+     BadgeView  提示红点
+--------    
+     SwipeLayout 侧滑按钮
+--------    
     
     
 
 ##依赖使用
-    compile 'me.czmc.library:widget:1.0.5'
+    compile 'me.czmc.library:widget:1.0.6'
+    or 
+    compile 'me.czmc.library:widget:+'
 
 ##License
     Copyright 2016 czmc, Inc.
