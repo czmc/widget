@@ -1,7 +1,7 @@
 #插件小集合
 效果图如下：
 
-<img src="/preview/1.gif" width = "540" height = "720" alt="图片1" align=center />
+<img src="/preview/1.gif" width = "324" height = "576" alt="图片1" align=center />
 
 该项目目标是集成一些常见的UI组件，以便于使用：
 
