@@ -1,4 +1,10 @@
-#插件小集合
+# 插件小集合
+
+## 依赖使用
+    compile 'me.czmc.library:widget:1.0.6'
+    or 
+    compile 'me.czmc.library:widget:+'
+
 效果图如下：
 
 <img src="/preview/1.gif" width = "324" height = "576" alt="图片1" align=center />
@@ -75,12 +81,9 @@ v1.0.6
     
     
 
-##依赖使用
-    compile 'me.czmc.library:widget:1.0.6'
-    or 
-    compile 'me.czmc.library:widget:+'
 
-##License
+
+## License
     Copyright 2016 czmc, Inc.
     
     Licensed under the Apache License, Version 2.0 (the "License");
